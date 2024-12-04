@@ -27,7 +27,7 @@
 
         <div id="loginECadastro">
             <a id="btnEntrar" href="">Entrar na conta</a>
-            <a id="btnCadastrar" href="">Cadastrar</a>
+            <a id="btnCadastrar" href="./../Pages/Cadastro.php">Cadastrar</a>
         </div>
 
         <div>
