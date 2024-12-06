@@ -1,3 +1,10 @@
+<<?php
+
+$formType = isset($_GET['form']) ? $_GET['form'] : 'login';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,22 +20,23 @@
       <p>O melhor lugar para encontrar estilo e conveniência.</p>
     </div>
 
-    <div class="formulario-container" id="formulario-login">
-      <h2>Login do Cliente</h2>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Senha" required>
-      <button type="submit">Entrar</button>
-      <button class="botao-voltar" onclick="window.location.href='./../Pages/home.php'">Voltar à Página Principal</button>
-    </div>
+    <div class="formulario-container <?php echo $formType === 'login' ? '' : 'escondido'; ?>" id="formulario-login">
+  <h2>Login do Cliente</h2>
+  <input type="email" placeholder="Email" required>
+  <input type="password" placeholder="Senha" required>
+  <button type="submit">Entrar</button>
+  <button class="botao-voltar" onclick="window.location.href='./../Pages/home.php'">Voltar à Página Principal</button>
+</div>
 
-    <div class="formulario-container escondido" id="formulario-cadastro">
-      <h2>Cadastro de Cliente</h2>
-      <input type="text" placeholder="Nome Completo" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Senha" required>
-      <button type="submit">Registrar</button>
-      <button class="botao-voltar" onclick="window.location.href='./../Pages/home.php'">Voltar à Página Principal</button>
-    </div>
+<div class="formulario-container <?php echo $formType === 'cadastro' ? '' : 'escondido'; ?>" id="formulario-cadastro">
+  <h2>Cadastro de Cliente</h2>
+  <input type="text" placeholder="Nome Completo" required>
+  <input type="email" placeholder="Email" required>
+  <input type="password" placeholder="Senha" required>
+  <button type="submit">Registrar</button>
+  <button class="botao-voltar" onclick="window.location.href='./../Pages/home.php'">Voltar à Página Principal</button>
+</div>
+
 
     <div class="alternar" id="botao-alternar">⇆</div>
   </div>
